@@ -64,6 +64,7 @@ locale return in-string"""
                 for line in file.read().split("\n"):
                     if("=" in line):
                         data = line.split("=")
+                        data = [i.strip() for i in data]
                         lang[data[0]] = data[1]
         except:
             return {}
